@@ -24,3 +24,13 @@ services:
 	- Model\UserManager
 	- App\RouterFactory
 	router: @App\RouterFactory::createRouter
+
+extensions:
+	foo: FooExtension
+
+foo:
+	# this is ok
+	#bar: 'value'
+	# this causes confusing error
+	bar:
+		test: 'value'
